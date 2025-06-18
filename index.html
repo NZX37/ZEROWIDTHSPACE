@@ -4,8 +4,26 @@
   <meta charset="UTF-8">
   <title>Static Link Page</title>
   <style>
-    body {margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #01489b; color: white;}
-    nav {background-color: #012f6b; padding: 15px 20px; display: flex; align-items: center;}
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #01489b;
+      color: white;
+    }
+
+    nav {
+      background-color: #012f6b;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
     nav h1 {
       margin: 0;
@@ -24,10 +42,15 @@
       padding: 30px 20px;
     }
 
+    section {
+      margin-top: 40px;
+    }
+
     h2 {
       color: #198c6e;
-      font-size: 1.25rem;
-      margin-top: 0;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #198c6e;
+      padding-bottom: 5px;
     }
 
     .link-box {
@@ -66,68 +89,82 @@
 <body>
   <nav>
     <h1>Link Hub</h1>
+    <a href="#dev">Dev</a>
     <a href="#optics">Optics</a>
     <a href="#physics">Physics</a>
-    <a href="#dev">Dev</a>
   </nav>
 
   <div class="container">
-    <h2>The following are hyperlinks to important websites</h2>
 
-    <div class="link-box" id="dev">
-      <a href="https://github.com/NUSHDev">NUSHDev</a>
-      <p>A super cool dev company run by 11gohjy!!</p>
-    </div>
+    <section id="dev">
+      <h2>Development</h2>
 
-    <div class="link-box">
-      <a href="https://github.com/NZX37/python-deploy">NZX37</a>
-      <p>A member of NUSHdev who realises he needs to start getting better at html and use more github!!!</p>
-    </div>
+      <div class="link-box">
+        <a href="https://github.com/NUSHDev">NUSHDev</a>
+        <p>GitHub organization for NUSH computing/development projects.</p>
+      </div>
 
-    <div class="link-box" id="optics">
-      <a href="https://www.edmundoptics.com/knowledge-center/application-notes/optics/optics-101-level-1-theoretical-foundations">Optics 101</a>
-      <p>List of topics for optics that make my eyes burn</p>
-    </div>
+      <div class="link-box">
+        <a href="https://github.com/NZX37/python-deploy">NZX37</a>
+        <p>Personal GitHub repo focused on Python deployment examples.</p>
+      </div>
 
-    <div class="link-box">
-      <a href="https://forms.office.com/Pages/DesignPageV2.aspx?analysis=false&prevsubpage=design">Forms</a>
-      <p>Microsoft forms, for making forms, esp useful for bfb</p>
-    </div>
+      <div class="link-box">
+        <a href="https://forms.office.com/Pages/DesignPageV2.aspx?analysis=false&prevsubpage=design">Forms</a>
+        <p>Create or design Microsoft Forms for data collection.</p>
+      </div>
 
-    <div class="link-box">
-      <a href="https://www.youtube.com/watch?v=Mv54UfwYYos">Fusion 360 Day 7</a>
-      <p>Kevin's Fusion 360 stuff</p>
-    </div>
+      <div class="link-box">
+        <a href="https://imagecolorpicker.com/color-code/01489b">Color Picker</a>
+        <p>Tool for selecting and inspecting web color codes.</p>
+      </div>
+    </section>
 
-    <div class="link-box" id="physics">
-      <a href="https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:kinematics/xf557a762645cccc5:mathematical-models-of-motion/e/freefall-exercise-ap1-graphs-and-concepts">Khan Academy</a>
-      <p>Random course</p>
-    </div>
+    <section id="optics">
+      <h2>Optics</h2>
 
-    <div class="link-box">
-      <a href="https://drive.google.com/file/d/18MN5UY4VZu91kV93iTefEV-bMPp2YsLN/view">Physics Text</a>
-      <p>Pay this link no mind whatsoever</p>
-    </div>
+      <div class="link-box">
+        <a href="https://www.edmundoptics.com/knowledge-center/application-notes/optics/optics-101-level-1-theoretical-foundations">
+          Optics 101
+        </a>
+        <p>Beginner-friendly introduction to optics from Edmund Optics.</p>
+      </div>
+    </section>
 
-    <div class="link-box">
-      <a href="https://sgphysicsleague.org/archives/2024/solutions.pdf#Simp">SPhL Archive</a>
-      <p>2024 Singapore Physics League archive of solution documents.</p>
-    </div>
+    <section id="physics">
+      <h2>Physics & Resources</h2>
 
-    <div class="link-box">
-      <a href="https://sgphysicsleague.org/data_sheet.pdf">SPhL Data Sheet</a>
-      <p>Singapore Physics League competition data sheet (PDF format).</p>
-    </div>
+      <div class="link-box">
+        <a href="https://www.youtube.com/watch?v=Mv54UfwYYos">Fusion 360 Day 7</a>
+        <p>YouTube tutorial for learning CAD using Fusion 360 software.</p>
+      </div>
 
-    <div class="link-box">
-      <a href="https://sgphysicsleague.org/problems">SPhL Website</a>
-      <p>Main problems page of the Singapore Physics League site.</p>
-    </div>
+      <div class="link-box">
+        <a href="https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:kinematics/xf557a762645cccc5:mathematical-models-of-motion/e/freefall-exercise-ap1-graphs-and-concepts">Khan Academy</a>
+        <p>Freefall and motion graphs lesson from Khan Academy.</p>
+      </div>
 
-    <div class="link-box">
-      <a href="https://imagecolorpicker.com/color-code/01489b">Color Picker</a>
-      <p>Tool for selecting and inspecting web colors.</p>
-    </div>
+      <div class="link-box">
+        <a href="https://drive.google.com/file/d/18MN5UY4VZu91kV93iTefEV-bMPp2YsLN/view">Physics Text</a>
+        <p>Downloadable physics reference book from Google Drive.</p>
+      </div>
+
+      <div class="link-box">
+        <a href="https://sgphysicsleague.org/archives/2024/solutions.pdf#Simp">SPhL Archive</a>
+        <p>Archive of 2024 Singapore Physics League solutions.</p>
+      </div>
+
+      <div class="link-box">
+        <a href="https://sgphysicsleague.org/data_sheet.pdf">SPhL Data Sheet</a>
+        <p>Official data sheet for use in SPhL competitions.</p>
+      </div>
+
+      <div class="link-box">
+        <a href="https://sgphysicsleague.org/problems">SPhL Website</a>
+        <p>Main Singapore Physics League problem and info site.</p>
+      </div>
+    </section>
+
   </div>
 </body>
 </html>
