@@ -4,18 +4,20 @@
   <meta charset="UTF-8">
   <title>Static Link Page</title>
 </head>
-<body>
-<button id="copyBtn">Copy Text</button>
-<p id="textToCopy">​</p>
-</body>
+  <body>
+    <h1 color="#000f63">Zero Width Space Generator</h1>
+    <br>
+    <button id="copyBtn">Copy Zero Width Space</button>
+    <p id="textToCopy">​</p>
+  </body>
 <script>
 document.getElementById("copyBtn").addEventListener("click", async () => {
     const text = document.getElementById("textToCopy").innerText;
     try {
         await navigator.clipboard.writeText(text);
-        alert("Copied to clipboard!");
+        alert("You have 001 zero width space in your clipboard");
     } catch (err) {
-        console.error("Failed to copy: ", err);
+        console.error("Failed to copy:", err);
     }
 });
 </script>
