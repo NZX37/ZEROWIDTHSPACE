@@ -3,172 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Static Link Page</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('https://tse3.mm.bing.net/th/id/OIP.I5eb4Er9fjom5O_WD3TtMQHaEK?rs=1&pid=ImgDetMain');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white;
-}
-    }
-
-    nav {
-      background-color: #012f6b;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      flex-grow: 1;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    .container {
-      padding: 30px 20px;
-    }
-
-    section {
-      margin-top: 40px;
-    }
-
-    h2 {
-      color: #198c6e;
-      font-size: 1.5rem;
-      border-bottom: 2px solid #198c6e;
-      padding-bottom: 5px;
-    }
-
-    .link-box {
-      background-color: #035fcf;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    .link-box a {
-      color: #ffffff;
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    .link-box p {
-      margin: 5px 0 0;
-      color: #cfe8ff;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav a {
-        margin: 10px 0 0 0;
-      }
-    }
-  </style>
 </head>
-
 <body>
-  <nav>
-    <h1>Link Hub</h1>
-    <a href="#dev">Dev</a>
-    <a href="#optics">Optics</a>
-    <a href="#physics">Physics</a>
-  </nav>
-
-  <div class="container">
-
-    <section id="dev">
-      <h2>Development</h2>
-
-      <div class="link-box">
-        <a href="https://github.com/NUSHDev">NUSHDev</a>
-        <p>A very good company by 11gohjy</p>
-      </div>
-
-      <div class="link-box">
-        <a href="https://github.com/NZX37/python-deploy">NZX37</a>
-        <p>A member of said NUSHdev who needs to get better at github</p>
-      </div>
-
-      <div class="link-box">
-        <a href="https://forms.office.com/Pages/DesignPageV2.aspx?analysis=false&prevsubpage=design">Forms</a>
-        <p>Microsoft forms for collecting votes, used in uniPHI and BFB</p>
-      </div>
-
-      <div class="link-box">
-        <a href="https://imagecolorpicker.com/color-code/01489b">Color Picker</a>
-        <p>Tool for selecting and inspecting web color codes.</p>
-      </div>
-    </section>
-
-    <section id="optics">
-      <h2>Optics</h2>
-
-      <div class="link-box">
-        <a href="https://www.edmundoptics.com/knowledge-center/application-notes/optics/optics-101-level-1-theoretical-foundations">
-          Optics 101
-        </a>
-        <p>Beginner-friendly introduction to optics ahhahahaha</p>
-      </div>
-    </section>
-
-    <section id="physics">
-      <h2>Physics & Resources</h2>
-
-      <div class="link-box">
-        <a href="https://www.youtube.com/watch?v=Mv54UfwYYos">Fusion 360 Day 7</a>
-        <p>Kevin's Fusion 360 stuff</p>
-      </div>
-
-      <div class="link-box">
-        <a href="https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:kinematics/xf557a762645cccc5:mathematical-models-of-motion/e/freefall-exercise-ap1-graphs-and-concepts">Khan Academy</a>
-        <p>Ap Physics course from khan himself</p>
-      </div>
-
-      <div class="link-box">
-        <a href="https://drive.google.com/file/d/18MN5UY4VZu91kV93iTefEV-bMPp2YsLN/view">Physics Text</a>
-        <p>Downloadable physics reference book from Google Drive.</p>
-      </div>
-
-      <div class="link-box">
-        <a href="https://sgphysicsleague.org/archives/2024/solutions.pdf#Simp">SPhL Archive</a>
-        <p>Archive of 2024 Singapore Physics League solutions.</p>
-      </div>
-
-      <div class="link-box">
-        <a href="https://sgphysicsleague.org/data_sheet.pdf">SPhL Data Sheet</a>
-        <p>Official data sheet for use in SPhL competitions.</p>
-      </div>
-
-      <div class="link-box">
-        <a href="https://sgphysicsleague.org/problems">SPhL Website</a>
-        <p>Main Singapore Physics League problem and info site.</p>
-      </div>
-    </section>
-
-  </div>
+<button id="copyBtn">Copy Text</button>
+<p id="textToCopy">​</p>
+<script>
+document.getElementById("copyBtn").addEventListener("click", async () => {
+    const text = document.getElementById("textToCopy").innerText;
+    try {
+        await navigator.clipboard.writeText(text);
+        alert("Copied to clipboard!");
+    } catch (err) {
+        console.error("Failed to copy: ", err);
+    }
+});
+</script>
 </body>
 </html>
