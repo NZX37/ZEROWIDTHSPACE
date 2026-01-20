@@ -30,11 +30,10 @@ document.getElementById("copyBtn").addEventListener("click", async () => {
 document.getElementById("copyBtn2").addEventListener("click", async () => {
     const text2 = document.getElementById("textToCopy2").innerText;
     try {
-        await navigator.clipboard.writeText(text);
+        await navigator.clipboard.writeText(text2);
         alert("You have 001 █ in your clipboard");
     } catch (err) {
         console.error("Failed to copy:", err);
-    }
-});
+    });
 </script>
 </html>
