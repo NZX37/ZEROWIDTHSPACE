@@ -14,6 +14,9 @@
     <br>
     <button id="copyBtn">Copy</button>
     <p id="textToCopy">​</p>
+    <br>
+    <button id="copyBtn2">Copy</button>
+    <p id="textToCopy2">​█</p>
   </body>
 <script>
 document.getElementById("copyBtn").addEventListener("click", async () => {
@@ -21,6 +24,14 @@ document.getElementById("copyBtn").addEventListener("click", async () => {
     try {
         await navigator.clipboard.writeText(text);
         alert("You have 001 zero width space in your clipboard");
+    } catch (err) {
+        console.error("Failed to copy:", err);
+    });
+document.getElementById("copyBtn2").addEventListener("click", async () => {
+    const text2 = document.getElementById("textToCopy2").innerText;
+    try {
+        await navigator.clipboard.writeText(text);
+        alert("You have 001 █ in your clipboard");
     } catch (err) {
         console.error("Failed to copy:", err);
     }
